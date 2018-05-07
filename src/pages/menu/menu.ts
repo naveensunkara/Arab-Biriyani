@@ -137,6 +137,6 @@ export class MenuPage {
   }
 
   placeOrder(menu){
-    this.navCtrl.push('LoginPage');
+    this.navCtrl.push('CartPage',{items: this.menuItems});
   }
 }

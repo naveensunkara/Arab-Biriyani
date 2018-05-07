@@ -31,7 +31,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Menu', component: 'TutorialPage', class: 'inactive' },
+    { title: 'Menu', component: 'MenuPage', class: 'inactive' },
     { title: 'My Orders', component: 'WelcomePage', class: 'inactive' },
     { title: 'Payment History', component: 'TabsPage', class: 'inactive' },
     { title: 'My Account', component: 'CardsPage', class: 'inactive' },
@@ -39,7 +39,7 @@ export class MyApp {
     { title: 'Chat', component: 'LoginPage', class: 'inactive' },
     { title: 'Support', component: 'SignupPage', class: 'inactive' },
     { title: 'Log Out', component: 'ListMasterPage', class: 'inactive' },
-    { title: 'Menu', component: 'MenuPage', class: 'inactive' },
+    { title: 'Menu', component: 'TutorialPage', class: 'inactive' },
     { title: 'Settings', component: 'SettingsPage', class: 'inactive' },
     { title: 'Search', component: 'SearchPage', class: 'inactive' }
   ]

@@ -1,0 +1,36 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <button ion-button icon-only (click)="backButtonClick()">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+        </button>
+        <ion-title text-center>Your Cart</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item no-padding class="menuItem" *ngFor="let item of cartItems | myfilter:args ; index as i">
+            <ion-card>
+                <img [src]="item.imgSrc" />
+                <ion-card-content>
+                    <ion-card-title>
+                        {{item.title}}
+                    </ion-card-title>
+                    <p class="price">
+                        $ {{item.price}}
+                    </p>
+                    <div class="quantity-group">
+                        <button ion-button icon-only (click)="add(i)" class="add-btn">
+                            <ion-icon name="add"></ion-icon>
+                        </button>
+                        <input type="number" [(ngModel)]="item.quantity" class="quantity" (change)="cartCount()">
+                        <button ion-button icon-only (click)="remove(i)" class="remove-btn">
+                            <ion-icon name="md-remove"></ion-icon>
+                        </button>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+    <button ion-button block class="place-order" (click)="placeOrder(menuItems)">Place Order</button>
+</ion-content>
