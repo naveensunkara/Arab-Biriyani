@@ -2,7 +2,11 @@ page-login {
     ion-content.content-md{
         background: #6b0082;
         .scroll-content{
-            padding: 50px 0;
+            .logo{
+                min-height: 50%;
+                display: flex;
+                align-items: center;
+            }
             .loginLogo{
                 height: 250px;
                 width: auto;
@@ -10,7 +14,6 @@ page-login {
                 margin: auto;
             }
             .loginForm{
-                margin-top: 50px;
                 ion-item.item-md{
                     background-color: transparent; 
                     display: inline-block;
