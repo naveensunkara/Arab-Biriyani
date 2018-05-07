@@ -6,7 +6,7 @@
     <ion-title text-center>Menu</ion-title>
     <button ion-button icon-only class="cart">
       <ion-icon name="md-basket"></ion-icon>
-      <ion-badge item-end>2</ion-badge>
+      <ion-badge item-end>{{cart}}</ion-badge>
     </button>
   </ion-toolbar>
 </ion-header>
@@ -15,7 +15,7 @@
   <ion-list>
 
     <ion-item class="time-left">
-      02:45:15 Hrs left for tomorrows order
+      {{counter}} Hrs left for tomorrows order
     </ion-item>
 
     <ion-item class="menuItem" *ngFor="let item of menuItems; index as i">
@@ -31,7 +31,7 @@
           <button ion-button icon-only (click)="add(i)">
             <ion-icon name="add"></ion-icon>
           </button>
-          <input type="number" [(ngModel)]="item.quantity">
+          <input type="number" [(ngModel)]="item.quantity" (change)="cartCount()">
           <button ion-button icon-only (click)="remove(i)">
             <ion-icon name="md-remove"></ion-icon>
           </button>
