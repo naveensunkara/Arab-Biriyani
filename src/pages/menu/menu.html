@@ -13,32 +13,31 @@
 
 <ion-content>
   <ion-list>
-
     <ion-item class="time-left">
       {{counter}} Hrs left for tomorrows order
     </ion-item>
-
-    <ion-item class="menuItem" *ngFor="let item of menuItems; index as i">
+    <ion-item no-padding class="menuItem" *ngFor="let item of menuItems; index as i">
       <ion-card>
         <img [src]="item.imgSrc" />
         <ion-card-content>
           <ion-card-title>
             {{item.title}}
           </ion-card-title>
-          <p>
+          <p class="price">
             $ {{item.price}}
           </p>
-          <button ion-button icon-only (click)="add(i)">
+          <div class="quantity-group">
+          <button ion-button icon-only (click)="add(i)" class="add-btn">
             <ion-icon name="add"></ion-icon>
           </button>
-          <input type="number" [(ngModel)]="item.quantity" (change)="cartCount()">
-          <button ion-button icon-only (click)="remove(i)">
+          <input type="number" [(ngModel)]="item.quantity" class="quantity" (change)="cartCount()">
+          <button ion-button icon-only (click)="remove(i)" class="remove-btn">
             <ion-icon name="md-remove"></ion-icon>
           </button>
+        </div>
         </ion-card-content>
       </ion-card>
     </ion-item>
-
   </ion-list>
-  <button ion-button block (click)="placeOrder(menuItems)">Place Order</button>
+  <button ion-button block class="place-order" (click)="placeOrder(menuItems)">Place Order</button>
 </ion-content>

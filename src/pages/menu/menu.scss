@@ -18,4 +18,77 @@ page-menu {
             }
         }
     }
+    ion-card  {
+        img {
+            width: 35%;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    ion-card-content.card-content-md {
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        width: 65%;
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+    ion-content{
+        ion-list {
+            .time-left {
+                background: #fefa8d;
+                text-align: center;
+            }
+            padding-bottom: 4.5rem;
+        }
+        .place-order {
+            background: #fea20f;
+            color: #333;
+            position: fixed;
+            bottom: 0px;
+            font-size: 2rem;
+            height: 6rem;
+            margin:0px;
+        }
+    }
+    .menuItem.item-md.item-block {
+        .item-inner {
+            padding-right: 0px;
+            .label.label-md {
+                margin: 0px;
+                .card-md{
+                    margin: 0px;
+                    width: 100%;
+                    .quantity-group {
+                        border: 1px solid #95989a;
+                        border-radius: 10px;
+                        display: inline-block;
+                        overflow: hidden;
+                        position: absolute;
+                        bottom: 1rem;
+                        right: 1rem;
+                        background: #fff;
+                        .quantity {
+                            width: 40px;
+                            border: 0px solid #ccc;
+                            text-align: center;
+                            font-size: 1.8rem;
+                            height: 3.6rem;
+                        }
+                        .button-md {
+                            background: #fff;
+                            color: #333;
+                            margin: 0px;
+                            vertical-align: top;
+                            box-shadow: none;
+                            font-size: 1rem
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }
