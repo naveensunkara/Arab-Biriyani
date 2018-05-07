@@ -13,28 +13,44 @@ type PageList = PageItem[]
   templateUrl: 'menu.html'
 })
 export class MenuPage {
-  // A reference to the ion-nav in our component
-  @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'ContentPage';
-
-  pages: PageList;
-
+  menuItems: any = [
+    {
+      title: "Chicken Biriyani",
+      price: "10.99",
+      quantity: 0,
+      imgSrc: ""
+    },
+    {
+      title: "Mutton Biriyani",
+      price: "19.99",
+      quantity: 0,
+      imgSrc: ""
+    },
+    {
+      title: "Fish Biriyani",
+      price: "11.99",
+      quantity: 0,
+      imgSrc: ""
+    },
+    {
+      title: "Egg Biriyani",
+      price: "7.99",
+      quantity: 0,
+      imgSrc: ""
+    },
+    {
+      title: "Veg Biriyani",
+      price: "5.99",
+      quantity: 0,
+      imgSrc: ""
+    }
+  ]
   constructor(public navCtrl: NavController) {
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Sign in', component: 'LoginPage' },
-      { title: 'Signup', component: 'SignupPage' }
-    ];
+    
   }
 
   ionViewDidLoad() {
     console.log('Hello MenuPage Page');
-  }
-
-  openPage(page: PageItem) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
   }
 }
