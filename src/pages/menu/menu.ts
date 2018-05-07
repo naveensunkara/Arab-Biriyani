@@ -13,7 +13,7 @@ type PageList = PageItem[]
   templateUrl: 'menu.html'
 })
 export class MenuPage {
-
+  cart: any = 0;
   menuItems: any = [
     {
       title: "Chicken Biriyani",
@@ -52,5 +52,24 @@ export class MenuPage {
 
   ionViewDidLoad() {
     console.log('Hello MenuPage Page');
+  }
+
+  add(itemIndex){
+    this.menuItems[itemIndex].quantity++;
+    this.cartCount();
+  }
+
+  remove(itemIndex){
+    if(this.menuItems[itemIndex].quantity > 0){
+      this.menuItems[itemIndex].quantity--;
+    }
+    this.cartCount();
+  }
+
+  cartCount(){
+    this.cart = 0;
+    this.menuItems.forEach(element => {
+      this.cart = element.quantity + this.cart;
+    });
   }
 }

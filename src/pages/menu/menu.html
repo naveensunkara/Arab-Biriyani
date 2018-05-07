@@ -18,7 +18,7 @@
       02:45:15 Hrs left for tomorrows order
     </ion-item>
 
-    <ion-item class="menuItem" *ngFor="let item of menuItems">
+    <ion-item class="menuItem" *ngFor="let item of menuItems; index as i">
       <ion-card>
         <img [src]="item.imgSrc" />
         <ion-card-content>
@@ -28,11 +28,11 @@
           <p>
             $ {{item.price}}
           </p>
-          <button ion-button icon-only>
+          <button ion-button icon-only (click)="add(i)">
             <ion-icon name="add"></ion-icon>
           </button>
-          <p>{{item.quantity}}</p>
-          <button ion-button icon-only>
+          <input type="number" [(ngModel)]="item.quantity">
+          <button ion-button icon-only (click)="remove(i)">
             <ion-icon name="md-remove"></ion-icon>
           </button>
         </ion-card-content>
