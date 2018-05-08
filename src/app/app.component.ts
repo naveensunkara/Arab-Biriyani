@@ -10,7 +10,7 @@ import { Settings } from '../providers';
   template: `<ion-menu [content]="content" [swipeEnabled]="swipe" persistent="true">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+        <ion-title>Arab St Biriyani</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -38,14 +38,11 @@ export class MyApp {
     { title: 'Notification', component: 'ContentPage', class: 'inactive' },
     { title: 'Chat', component: 'LoginPage', class: 'inactive' },
     { title: 'Support', component: 'SignupPage', class: 'inactive' },
-    { title: 'Log Out', component: 'ListMasterPage', class: 'inactive' },
-    { title: 'Menu', component: 'TutorialPage', class: 'inactive' },
-    { title: 'Settings', component: 'SettingsPage', class: 'inactive' },
-    { title: 'Search', component: 'SearchPage', class: 'inactive' }
+    { title: 'Log Out', component: 'ListMasterPage', class: 'inactive' }
   ]
 
   constructor(platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
-    this.pages[5].class = 'active';
+    this.pages[0].class = 'active';
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

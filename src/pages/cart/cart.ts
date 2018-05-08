@@ -51,4 +51,7 @@ export class CartPage {
         if (this.cart > 99)
             this.cart = '99+';
     }
+    nextPage(){
+        this.navCtrl.push('PaymentPage');
+    }
 }
