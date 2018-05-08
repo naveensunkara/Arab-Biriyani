@@ -33,26 +33,26 @@
                     </div>
                     <div class="menuItemPrice" text-right>
                         <p>Price</p>
-                        <p>$ {{item.quantity * item.price}}</p>
+                        <p>$ {{parse(item.quantity * item.price)}}</p>
                     </div>
                 </ion-card-content>
             </ion-card>
         </ion-item>
         <ion-item class="coupon">
-            <ion-input type="text" placeholder="Enter Coupon here" [(ngModel)]="coupon"></ion-input>
+            <ion-input type="text" placeholder="Enter Coupon here" [(ngModel)]="coupon" (change)="discount()"></ion-input>
         </ion-item>
         <ion-item class="gst">
             <p class="gstLabel">GST (7%)</p>
-            <p>$ {{tax}}</p>
+            <p>$ {{parse(tax)}}</p>
         </ion-item>
         <ion-item class="grandTotal">
             <div class="cartQuantity">
                 <p>TOTAL QTY</p>
                 <p class="bigFont">{{cart}}</p>
             </div>
-            <div class="total">
+            <div class="total" text-right>
                 <p>TOTAL</p>
-                <p class="bigFont">$ {{total}}</p>
+                <p class="bigFont">$ {{parse(total)}}</p>
             </div>
         </ion-item>
     </ion-list>
