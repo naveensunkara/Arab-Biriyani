@@ -32,7 +32,7 @@ export class MyApp {
 
   pages: any[] = [
     { title: 'Menu', component: 'MenuPage', class: 'inactive' },
-    { title: 'My Orders', component: 'WelcomePage', class: 'inactive' },
+    { title: 'My Orders', component: 'OrderPage', class: 'inactive' },
     { title: 'Payment History', component: 'TabsPage', class: 'inactive' },
     { title: 'My Account', component: 'CardsPage', class: 'inactive' },
     { title: 'Notification', component: 'ContentPage', class: 'inactive' },

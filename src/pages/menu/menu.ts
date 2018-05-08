@@ -60,6 +60,7 @@ export class MenuPage {
 
   ionViewDidLoad() {
     this.initTimer();
+    this.cartCount();
   }
 
   hasFinished() {

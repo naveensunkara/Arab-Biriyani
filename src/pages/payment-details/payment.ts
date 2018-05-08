@@ -15,6 +15,6 @@ export class PaymentPage {
     }
 
     backButtonClick(){
-        this.navCtrl.push('CartPage');
+        this.navCtrl.pop();
     }
 }
