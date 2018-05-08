@@ -13,11 +13,11 @@
             <ion-toolbar>
                 <ion-buttons left>
                     <h1>
-                        Street Biryani
+                        {{details.name}}
                     </h1>
                 </ion-buttons>
                 <ion-buttons right>
-                    <button ion-button icon-only>
+                    <button ion-button icon-only (click)="editAddress()">
                         <ion-icon name="ios-create-outline"></ion-icon>
                     </button>
                 </ion-buttons>
@@ -25,14 +25,14 @@
         </ion-card-header>
         <ion-card-content>
             <ion-label no-margin>Contact Number</ion-label>
-            <h1>+65 89745641</h1>
+            <h1>{{details.phone}}</h1>
             <ion-label no-margin>Location</ion-label>
-            <h1>Blk 10-12 Street, 101-11 Singapore 609878</h1>
+            <h1>{{details.location}}</h1>
         </ion-card-content>
     </ion-card>
 </ion-content>
 <ion-footer>
     <ion-toolbar>
-        <button ion-button block (click)="nextPage()">Update Password</button>
+        <button ion-button block (click)="showPrompt()">Update Password</button>
     </ion-toolbar>
 </ion-footer>
