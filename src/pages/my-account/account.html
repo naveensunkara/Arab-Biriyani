@@ -1,0 +1,38 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-center>My Accounts</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="street-food-bg"> </div>
+    <ion-card no-margin class="myAccount-details">
+        <ion-card-header>
+            <ion-toolbar>
+                <ion-buttons left>
+                    <h1>
+                        Street Biryani
+                    </h1>
+                </ion-buttons>
+                <ion-buttons right>
+                    <button ion-button icon-only>
+                        <ion-icon name="ios-create-outline"></ion-icon>
+                    </button>
+                </ion-buttons>
+            </ion-toolbar>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-label no-margin>Contact Number</ion-label>
+            <h1>+65 89745641</h1>
+            <ion-label no-margin>Location</ion-label>
+            <h1>Blk 10-12 Street, 101-11 Singapore 609878</h1>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <button ion-button block (click)="nextPage()">Update Password</button>
+    </ion-toolbar>
+</ion-footer>
