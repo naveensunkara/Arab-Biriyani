@@ -21,6 +21,22 @@ page-cart {
             }
         }
     }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-content{
+                .place-order {
+                    background: #fea20f;
+                    color: #333;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    height: 6rem;
+                    margin:0px;
+                    position: static;
+                }  
+            }
+        }
+    }
     ion-card  {
         img {
             width: 35%;
@@ -77,15 +93,6 @@ page-cart {
                     }
                 }
             }
-        }
-        .place-order {
-            background: #fea20f;
-            color: #333;
-            position: fixed;
-            bottom: 0px;
-            font-size: 2rem;
-            height: 6rem;
-            margin:0px;
         }
     }
     .menuItem.item-md.item-block {
