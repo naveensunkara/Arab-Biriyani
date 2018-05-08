@@ -7,7 +7,7 @@
     </ion-toolbar>
 </ion-header>
 <ion-content>
-    <ion-segment [(ngModel)]="category">
+    <ion-segment [(ngModel)]="category" (ionChange)="segmentChanged($event)">
         <ion-segment-button value="all">
             All
         </ion-segment-button>
@@ -19,17 +19,17 @@
         </ion-segment-button>
     </ion-segment>
     <div class="history">
-        <ion-card no-margin>
+        <ion-card no-margin *ngFor="let item of tempArr">
             <ion-card-header>
-                    <ion-icon name="md-card"></ion-icon>
-                <h1>Header</h1>
+                <ion-icon [name]="item.icon"></ion-icon>
+                <h1>{{item.title}}</h1>
             </ion-card-header>
             <ion-card-content>
                 <p>
-                    <span>Purchase Order #1100011</span>
-                    <span class="amount" float-right>$ 1165.44</span>
+                    <span>{{item.order}}</span>
+                    <span class="amount" float-right>{{item.amount}}</span>
                 </p>
-                <p class="date">On 25, Apr, 2018 11:47 PM</p>
+                <p class="date">{{item.date}}</p>
             </ion-card-content>
         </ion-card>
     </div>
