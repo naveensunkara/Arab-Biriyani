@@ -12,4 +12,7 @@ export class CompletePage {
   backButtonClick(){
       this.navCtrl.pop();
   }
+  nextPage(){
+    this.navCtrl.push('TrackPage');
+  }
 }

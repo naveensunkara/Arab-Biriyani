@@ -21,4 +21,7 @@ export class CartPage{
     backButtonClick(){
         this.navCtrl.pop();
     }
+    nextPage(){
+        this.navCtrl.push('PaymentPage');
+    }
 }

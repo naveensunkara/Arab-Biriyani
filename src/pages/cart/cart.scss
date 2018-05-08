@@ -7,6 +7,7 @@ page-cart {
                 box-shadow: none;
                 position: absolute;
                 top: 8px;
+                z-index: 10;
                 ion-badge.badge-md{
                     padding: 4px 0;
                     width: 20px;
