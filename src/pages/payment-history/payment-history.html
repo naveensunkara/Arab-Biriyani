@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-center>Payment History</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-segment [(ngModel)]="category">
+        <ion-segment-button value="all">
+            All
+        </ion-segment-button>
+        <ion-segment-button value="paid">
+            Paid
+        </ion-segment-button>
+        <ion-segment-button value="refund">
+            Refund
+        </ion-segment-button>
+    </ion-segment>
+    <div class="history">
+        <ion-card no-margin>
+            <ion-card-header>
+                    <ion-icon name="md-card"></ion-icon>
+                <h1>Header</h1>
+            </ion-card-header>
+            <ion-card-content>
+                <p>
+                    <span>Purchase Order #1100011</span>
+                    <span class="amount" float-right>$ 1165.44</span>
+                </p>
+                <p class="date">On 25, Apr, 2018 11:47 PM</p>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>
