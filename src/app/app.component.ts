@@ -34,11 +34,11 @@ export class MyApp {
     { title: 'Menu', component: 'MenuPage', class: 'inactive' },
     { title: 'My Orders', component: 'OrderPage', class: 'inactive' },
     { title: 'Payment History', component: 'PaymentHistoryPage', class: 'inactive' },
-    { title: 'My Account', component: 'CardsPage', class: 'inactive' },
-    { title: 'Notification', component: 'ContentPage', class: 'inactive' },
-    { title: 'Chat', component: 'LoginPage', class: 'inactive' },
-    { title: 'Support', component: 'SignupPage', class: 'inactive' },
-    { title: 'Log Out', component: 'ListMasterPage', class: 'inactive' }
+    { title: 'My Account', component: 'AccountPage', class: 'inactive' },
+    { title: 'Notification', component: 'NotificationPage', class: 'inactive' },
+    { title: 'Chat', component: 'ChatPage', class: 'inactive' },
+    { title: 'Support', component: 'SupportPage', class: 'inactive' },
+    { title: 'Log Out', component: 'LoginPage', class: 'inactive' }
   ]
 
   constructor(platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
