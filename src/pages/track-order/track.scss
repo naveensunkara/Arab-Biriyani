@@ -10,6 +10,22 @@ page-track-order {
             }
         }
     }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-content{
+                button {
+                    background: #fea20f;
+                    color: #333;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    height: 6rem;
+                    margin:0px;
+                    position: static;
+                }  
+            }
+        }
+    }
     ion-card.card-md {
         width: 100%;
         ion-card-header {
@@ -76,20 +92,20 @@ page-track-order {
     .scroll-content {
         background: #efefef;
     }
-    .footer {
-        background: #fea20f;
-        text-align: center;
-        width: 100%;
-        position: fixed;
-        bottom: 0px;
-        button {
-            background: transparent;
-            box-shadow: none;
-            width: 45%;
-            font-size: 2.125rem;
-            color: #040404;
-            height: 6rem;
-            font-weight: bold;
-        }
-    }
+    // .footer {
+    //     background: #fea20f;
+    //     text-align: center;
+    //     width: 100%;
+    //     position: fixed;
+    //     bottom: 0px;
+    //     button {
+    //         background: transparent;
+    //         box-shadow: none;
+    //         width: 45%;
+    //         font-size: 2.125rem;
+    //         color: #040404;
+    //         height: 6rem;
+    //         font-weight: bold;
+    //     }
+    // }
 }

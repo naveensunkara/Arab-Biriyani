@@ -18,6 +18,33 @@ page-menu {
             }
         }
     }
+    ion-footer{
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-background-md{
+                background: transparent;
+            }
+            .place-order {
+                background: #fea20f;
+                color: #333; 
+                font-size: 2rem;
+                font-weight: 700;
+                height: 6rem;
+                margin:0px;
+            }
+        }
+    }
+    
+    .time-left.item-md.item-block {
+        background: #fefa8d;
+        text-align: center;
+        .item-inner {
+            padding: 0px;
+            .label-md {
+                margin: 0px;
+            }
+        }
+    }
     ion-card  {
         img {
             width: 35%;
@@ -33,24 +60,6 @@ page-menu {
         .price {
             font-size: 2rem;
             font-weight: 700;
-        }
-    }
-    ion-content{
-        ion-list {
-            .time-left {
-                background: #fefa8d;
-                text-align: center;
-            }
-            padding-bottom: 4.5rem;
-        }
-        .place-order {
-            background: #fea20f;
-            color: #333;
-            position: fixed;
-            bottom: 0px;
-            font-size: 2rem;
-            height: 6rem;
-            margin:0px;
         }
     }
     .menuItem.item-md.item-block {

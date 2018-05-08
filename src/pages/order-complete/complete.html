@@ -26,8 +26,14 @@
             <h1>Thank You!</h1>
         </ion-card-header>
     </ion-card>
-    <div class="footer">
-        <button ion-button inline (click)="backButtonClick()">Back to Orders</button>
-        <button ion-button inline (click)="nextPage()">Track Order</button>
-    </div>
 </ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-buttons left>
+            <button ion-button (click)="backButtonClick()">Back to Orders</button>
+        </ion-buttons>
+        <ion-buttons right>
+            <button ion-button (click)="nextPage()">Track Order</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
