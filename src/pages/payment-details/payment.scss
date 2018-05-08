@@ -1,4 +1,4 @@
-page-track-order {
+page-payment-details {
     ion-toolbar {
         .toolbar-content {
             .button-md {
@@ -12,6 +12,7 @@ page-track-order {
     }
     ion-card.card-md {
         width: 100%;
+        margin-bottom: 2rem;
         ion-card-header {
             font-size: 2.25rem;
             color: #95989a;
@@ -20,35 +21,23 @@ page-track-order {
                 color: #5e5e5e;
                 font-weight: 700;
             }
+            h2.order-summary-title {
+                border-bottom: 3px solid #e6e6e6;
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #333;
+                padding-bottom: 1rem;
+                margin-bottom: 3rem; 
+            }
         }
     }
-    ion-card.order-status{
-        background: transparent;
-        box-shadow: none;
-        padding: 3rem 2rem; 
-        ion-card-header{
-            border-bottom: 3px solid #e6e6e6;
-            color: #333; 
-        }
-        ion-card-content {
-            color: #95989a;
-            font-size: 2.125rem;
-            ul {
-                li {
-                    list-style: none;
-                    background: url(../../assets/imgs/circumference.png) no-repeat left center;
-                    background-size: auto 80%;
-                    padding-left: 4rem;
-                    margin-bottom: 1.5rem; 
-                }
-                li.success {
-                    color: #484848; 
-                    background: url(../../assets/imgs/confirm.png) no-repeat left center;
-                    background-size: auto 80%;
-                }
+    ion-card.order-status {
+        ion-card-header {
+            h2.order-summary-title {
+                margin-bottom: 0px;
             }
-            
         }
+        
     }
     ion-card-content {
         table {
@@ -72,6 +61,33 @@ page-track-order {
                 text-align: right;
             }
         }
+        .item-radio{
+            .radio.radio-md {
+                margin-right: 1rem;
+                .radio-icon {
+                    border-color: #95989a;
+                }
+                .radio-icon.radio-checked {
+                    border-color: #5d4484;
+                    .radio-inner {
+                        background-color: #5d4484;
+                    }
+                }
+            }
+            .item-inner {
+                ion-label {
+                    color: #95989a;
+                    font-size: 2.25rem;
+                }
+            }
+        }
+        .item-radio.item-radio-checked {
+            .item-inner {
+                ion-label {
+                    color: #333;
+                }
+            }
+        }
     }
     .scroll-content {
         background: #efefef;
@@ -89,7 +105,7 @@ page-track-order {
             font-size: 2.125rem;
             color: #040404;
             height: 6rem;
-            font-weight: bold;
+            font-weight: bold; 
         }
     }
 }

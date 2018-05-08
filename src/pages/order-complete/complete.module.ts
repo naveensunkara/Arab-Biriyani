@@ -15,4 +15,4 @@ import { MenuPage } from '../menu/menu';
         CompletePage
     ]
   })
-  export class MenuPageModule { }
+  export class CompletePageModule { }

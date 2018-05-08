@@ -2,6 +2,17 @@ page-completed {
     .scroll-content {
         background: #efefef;
     }
+    ion-toolbar {
+        .toolbar-content {
+            .button-md {
+                background: transparent;
+                box-shadow: none;
+                position: absolute;
+                top: 8px;
+                z-index: 10;
+            }
+        }
+    } 
     ion-content {
         ion-card.card-md {
             width: 100%;
@@ -44,6 +55,7 @@ page-completed {
                 font-size: 2.125rem;
                 color: #040404;
                 height: 6rem;
+                font-weight: bold;
             }
         }
     }

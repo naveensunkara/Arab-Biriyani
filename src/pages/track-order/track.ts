@@ -8,5 +8,12 @@ import { IonicPage, Nav, NavController } from 'ionic-angular';
 })
 
 export class TrackPage {
-    
+  constructor(public navCtrl: NavController) { }
+  nextPage() {
+    this.navCtrl.push('TrackPage');
+  }
+
+  backButtonClick() {
+    this.navCtrl.push('CartPage');
+  }
 }

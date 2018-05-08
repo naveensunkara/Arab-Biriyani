@@ -3,12 +3,13 @@
         <button ion-button icon-only (click)="backButtonClick()">
             <ion-icon name="ios-arrow-back"></ion-icon>
         </button>
-        <ion-title text-center>Track Order</ion-title>
+        <ion-title text-center>Payment Detail</ion-title>
     </ion-toolbar>
 </ion-header>
 <ion-content>
     <ion-card no-margin>
         <ion-card-header>
+            <h2 class="order-summary-title">Order Summary</h2>
             Purchase Order #
             <h1 class="orderId">1101110</h1>
         </ion-card-header>
@@ -33,18 +34,27 @@
     </ion-card>
     <ion-card no-margin class="order-status">
         <ion-card-header>
-            Order Status
+            <h2 class="order-summary-title">Payment Method</h2>
         </ion-card-header>
         <ion-card-content>
-            <ul>
-                <li class="success">Order Placed</li>
-                <li class="success">Packing</li>
-                <li>Dispatched</li>
-                <li>Delivered</li>
-            </ul>
+            <ion-list radio-group>
+                <ion-item>
+                    <ion-radio item-left value="wallet" checked></ion-radio>
+                    <ion-label>Pay by BIRIYANI WALLET</ion-label>
+
+                </ion-item>
+                <ion-item>
+                    <ion-radio item-left value="debit"></ion-radio>
+                    <ion-label>Pay by Debit Card</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-radio item-left value="credit"></ion-radio>
+                    <ion-label>Pay by Credit Card</ion-label>
+                </ion-item>
+            </ion-list>
         </ion-card-content>
     </ion-card>
     <div class="footer">
-        <button ion-button inline>Back to Orders</button>
+        <button ion-button inline (click)="nextPage()">Confirm Order</button>
     </div>
 </ion-content>

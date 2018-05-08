@@ -8,5 +8,8 @@ import { IonicPage, Nav, NavController } from 'ionic-angular';
 })
 
 export class CompletePage {
-    
+  constructor(public navCtrl: NavController){}
+  backButtonClick(){
+      this.navCtrl.pop();
+  }
 }

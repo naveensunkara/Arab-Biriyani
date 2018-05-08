@@ -15,4 +15,4 @@ import { MenuPage } from '../menu/menu';
         TrackPage
     ]
   })
-  export class MenuPageModule { }
+  export class TrackPageModule { }
