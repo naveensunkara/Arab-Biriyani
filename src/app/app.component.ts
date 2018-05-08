@@ -9,7 +9,7 @@ import { Settings } from '../providers';
 @Component({
   template: `<ion-menu [content]="content" [swipeEnabled]="swipe" persistent="true">
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar text-center>
         <ion-title>Arab St Biriyani</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -27,7 +27,7 @@ import { Settings } from '../providers';
 })
 export class MyApp {
   rootPage = FirstRunPage;
-  swipe: boolean = true;
+  swipe: boolean = false;
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [

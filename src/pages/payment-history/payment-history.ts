@@ -11,21 +11,33 @@ export class PaymentHistoryPage {
     category: any = 'all';
     history: any = [
         {
-            title: 'Order Accepted',
-            date: '25, Apr, 2018 11:47 PM',
-            order: 'Purchase Order #1100011 Accepted'
+            type: 'paid',
+            title: 'Paid for Order',
+            amount: '$ 1165.44',
+            date: 'On 25, Apr, 2018 11:47 PM',
+            icon: 'md-card',
+            order: 'Purchase Order #1100011'
         },{
-            title: 'Delivered',
-            date: 'On 24, Apr, 2018 09:30 AM',
-            order: 'Purchase Order #1100010 Delivered to you'
+            type: 'refund',
+            title: 'Refund to Customer',
+            amount: '$ 811.34',
+            date: 'On 24, Apr, 2018 10:37 PM',
+            icon: 'logo-usd',
+            order: 'Ticket #ASB110011'
         },{
-            title: 'Order Dispatched',
-            date: '24, Apr, 2018 08:40 AM',
-            order: 'Purchase Order #1100010 dispatched. Our rider is on the way'
+            type: 'paid',
+            title: 'Paid for Order',
+            amount: '$ 785.35',
+            date: 'On 23, Apr, 2018 09:27 PM',
+            icon: 'md-card',
+            order: 'Purchase Order #1100009'
         },{
-            title: 'Packed for Delivery',
-            date: '24, Apr, 2018 08:40 AM',
-            order: 'Purchase Order #1100010 is packed for delivery.'
+            type: 'refund',
+            title: 'Refund to Customer',
+            amount: '$ 546.56',
+            date: 'On 22, Apr, 2018 08:07 PM',
+            icon: 'logo-usd',
+            order: 'Ticket #ASB110010'
         }
     ]
     tempArr: any = this.history;
