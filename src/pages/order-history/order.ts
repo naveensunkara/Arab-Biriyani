@@ -8,11 +8,15 @@ import { IonicPage, Nav, NavController } from 'ionic-angular';
 })
 
 export class OrderPage {
-//   constructor(public navCtrl: NavController){}
-//   backButtonClick(){
-//       this.navCtrl.pop();
-//   }
-//   TrackPage(){
-//     this.navCtrl.push('TrackPage');
-//   }
+    order: any = 'ongoing';
+  constructor(public navCtrl: NavController){}
+  backButtonClick(){
+      this.navCtrl.pop();
+  }
+  trackPage(page){
+    this.navCtrl.push(page);
+  }
+  segmentChanged($event){
+      console.log(this.order)
+  }
 }

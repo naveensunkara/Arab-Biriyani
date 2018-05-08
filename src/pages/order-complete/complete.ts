@@ -15,4 +15,7 @@ export class CompletePage {
   nextPage(){
     this.navCtrl.push('TrackPage');
   }
+  ordersPage(){
+    this.navCtrl.push('OrderPage');
+  }
 }
