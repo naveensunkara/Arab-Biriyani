@@ -35,6 +35,11 @@ page-chat {
             }
             ion-card {
                 width: 70%;
+                font-size: 1.5rem;
+                .card-header-md {
+                    padding-top: 5px;
+                    padding-bottom: 5px; 
+                }
             }
             .customer-text {
                 float: left;
