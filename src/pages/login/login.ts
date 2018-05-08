@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController, NavParams } from 'ionic-angular';
 
 import { User } from '../../providers';
 import { MainPage } from '../';
@@ -23,7 +23,10 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController,
     public user: User,
-    public toastCtrl: ToastController) {}
+    public toastCtrl: ToastController,
+    public navParams: NavParams) {
+      console.log(this.navParams)
+    }
 
   // Attempt to login in through our User service
   doLogin() {

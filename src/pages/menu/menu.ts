@@ -136,4 +136,7 @@ export class MenuPage {
       this.cart = '99+';
   }
 
+  placeOrder(menu){
+    this.navCtrl.push('CartPage',{items: this.menuItems});
+  }
 }
