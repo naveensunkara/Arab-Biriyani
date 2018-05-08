@@ -7,6 +7,7 @@ page-cart {
                 box-shadow: none;
                 position: absolute;
                 top: 8px;
+                z-index: 10;
                 ion-badge.badge-md{
                     padding: 4px 0;
                     width: 20px;
@@ -38,12 +39,44 @@ page-cart {
         }
     }
     ion-content{
+        .scroll-content{
+            background: #efefef;
+        }
         ion-list {
             .time-left {
                 background: #fefa8d;
                 text-align: center;
             }
-            margin-top: 10px !important;
+            .menuItem{
+                margin-top: 4px;
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+            }
+            .coupon{
+                display: inline-block;
+                width: calc(50% - 20px);
+                border-radius: 10px;
+                border: 1px solid #ccc;
+                margin: 20px 0 0 20px;
+                .item-inner{
+                    border-bottom: none !important;
+                    box-shadow: none !important;
+                }
+            }
+            .gst{
+                background: transparent;
+                display: inline-block;
+                width: 49%;
+                text-align: right;
+                font-weight: bold;
+                .label-md{
+                    margin-bottom: 0;
+                    p:last-child{
+                        font-size: 2.5rem;
+                        margin: 0;
+                    }
+                }
+            }
         }
         .place-order {
             background: #fea20f;
@@ -70,7 +103,7 @@ page-cart {
                         overflow: hidden;
                         position: absolute;
                         bottom: 1rem;
-                        right: 1rem;
+                        left: calc(35% + 16px); 
                         background: #fff;
                         .quantity {
                             width: 40px;
@@ -87,6 +120,13 @@ page-cart {
                             box-shadow: none;
                             font-size: 1rem
                         }
+                    }
+                    .menuItemPrice{
+                        *{color: #000;}
+                        p:last-child{
+                            font-size: 2rem;
+                            font-weight: bold;
+                        }                        
                     }
                 }
             }

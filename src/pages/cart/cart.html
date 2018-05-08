@@ -8,7 +8,10 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
+    <ion-list no-margin>
+        <ion-item class="time-left" *ngIf="!cartItems">
+            Your Cart is Empty
+        </ion-item>
         <ion-item no-padding class="menuItem" *ngFor="let item of cartItems | myfilter:args ; index as i">
             <ion-card>
                 <img [src]="item.imgSrc" />
@@ -20,17 +23,38 @@
                         $ {{item.price}}
                     </p>
                     <div class="quantity-group">
-                        <button ion-button icon-only (click)="add(i)" class="add-btn">
+                        <button ion-button icon-only (click)="add(item.title)" class="add-btn">
                             <ion-icon name="add"></ion-icon>
                         </button>
                         <input type="number" [(ngModel)]="item.quantity" class="quantity" (change)="cartCount()">
-                        <button ion-button icon-only (click)="remove(i)" class="remove-btn">
+                        <button ion-button icon-only (click)="remove(item.title)" class="remove-btn">
                             <ion-icon name="md-remove"></ion-icon>
                         </button>
+                    </div>
+                    <div class="menuItemPrice" text-right>
+                        <p>Price</p>
+                        <p>$ {{item.quantity * item.price}}</p>
                     </div>
                 </ion-card-content>
             </ion-card>
         </ion-item>
+        <ion-item class="coupon">
+            <ion-input type="text" placeholder="Enter Coupon here" [(ngModel)]="coupon"></ion-input>
+        </ion-item>
+        <ion-item class="gst">
+            <p class="gstLabel">GST (7%)</p>
+            <p>$ {{tax}}</p>
+        </ion-item>
+        <ion-item class="grandTotal">
+            <div class="cartQuantity">
+                <p>TOTAL QTY</p>
+                <p class="bigFont">{{cart}}</p>
+            </div>
+            <div class="total">
+                <p>TOTAL</p>
+                <p class="bigFont">$ {{total}}</p>
+            </div>
+        </ion-item>
     </ion-list>
-    <button ion-button block class="place-order" (click)="placeOrder(menuItems)">Place Order</button>
+    <button ion-button block class="place-order">PROCEED TO PAY</button>
 </ion-content>
