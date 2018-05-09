@@ -22,14 +22,14 @@
     <div [ngSwitch]="displayType">
         <div class="live" *ngSwitchCase="'live'">
             <ion-card no-margin *ngFor="let item of live">
-                <ion-card-header>
+                <ion-card-header (click)="slider(item,'recieved')">
                     <h1 class="orderId">{{item.order}}</h1>
                     <ion-badge item-end *ngIf="item.status == 'ready'" class="ready">READY FOR DELIVERY</ion-badge>
                     <ion-badge item-end *ngIf="item.status == 'packing'" class="packing">PACKING</ion-badge>
                 </ion-card-header>
                 <ion-card-content>
                     <div class="slideHeader">
-                        <table width="100%" margin-bottom>
+                        <table width="100%" margin-bottom (click)="slider(item,'recieved')">
                             <thead>
                                 <tr>
                                     <th>Customer</th>
@@ -49,7 +49,7 @@
                         </button>
                         <button ion-button small round class="trackorder" float-right icon-left (click)="slider(item,'location')">
                             <ion-icon name="md-pin"></ion-icon>
-                            LOCATION
+                            Address
                         </button>
                     </div>
                     <div class="slider" [style.margin]="item.sliderMargin">
@@ -67,6 +67,14 @@
                                 DIRECTIONS
                             </button>
                         </div>
+                        <div *ngIf="item.sliderType == 'recieved'">
+                                <h3>Order Summary</h3>
+                                <h1>CB X 1</h1>
+                                <h1>MB X 1</h1>
+                                <button ion-button small round class="reorder" (click)="direction(item.address)">
+                                    DIRECTIONS
+                                </button>
+                            </div>
                     </div>
                 </ion-card-content>
             </ion-card>
@@ -92,14 +100,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    <button ion-button icon-left small round class="reorder">
-                        <ion-icon name="md-call"></ion-icon>
-                        CALL
-                    </button>
-                    <button ion-button small round class="trackorder" float-right icon-left>
-                        <ion-icon name="md-pin"></ion-icon>
-                        LOCATION
-                    </button>
                 </ion-card-content>
             </ion-card>
         </div>

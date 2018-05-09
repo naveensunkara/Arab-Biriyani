@@ -15,25 +15,37 @@ export class RiderUserPage {
             order: 'Order # 1100011',
             status: 'ready',
             branch: 'Little India',
-            quantity: '80'
+            quantity: '80',
+            vessels: '3',
+            phone: '+65 6363 5498',
+            address: '414 Baleser Road<br>Singapore 329806'
         },
         {
             order: 'Order # 1100012',
             status: 'packing',
             branch: 'Fancy',
-            quantity: '60'
+            quantity: '60',
+            vessels: '5',
+            phone: '+65 6363 3413',
+            address: '414 Nasser Road<br>Singapore 456952'
         },
         {
             order: 'Order # 1100013',
             status: 'packing',
             branch: 'Little India',
-            quantity: '100'
+            quantity: '100',
+            vessels: '7',
+            phone: '+65 6363 5255',
+            address: '414 Rahman Road<br>Singapore 35622'
         },
         {
             order: 'Order # 1100014',
             status: 'packing',
             branch: 'Fine Biriyani',
-            quantity: '120'
+            quantity: '120',
+            vessels: '10',
+            phone: '+65 6363 6734',
+            address: '414 Elsaan Road<br>Singapore 63425'
         }
     ];
     completed: any = [

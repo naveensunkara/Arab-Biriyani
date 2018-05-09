@@ -52,18 +52,25 @@ page-rider-user{
             th{
                 font-weight: normal;
                 color: #95989a;
-                width: 30%;
+                &:first-child {
+                    width: 90%;
+                    text-align: left;
+                }
+                &:last-child {
+                    width: 10%;
+                    text-align: center;
+                }
             }
             td {
                 color: #5e5e5e;
                 font-weight: 700;
                 font-size: 2.5rem;
-            }
-            th:last-child {
-                text-align: right;
-            }
-            td:last-child {
-                text-align: right;
+                &:first-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    text-align: center;
+                }
             }
         }
         button.button-md{
@@ -90,9 +97,10 @@ page-rider-user{
             }
             button{
                 position: absolute;
-                bottom: 0;
+                bottom: 50%;
                 margin: 0;
                 right: 0;
+                margin-bottom: -1rem;
             }
             > div{
                 position: relative;
