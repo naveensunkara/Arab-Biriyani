@@ -12,7 +12,7 @@
 
 <ion-content>
     <!-- Segment in content -->
-    <ion-segment [(ngModel)]="displayType" color="primary">
+    <ion-segment [(ngModel)]="displayType" color="primary" #mycontent>
         <ion-segment-button value="today">
             Today
         </ion-segment-button>
@@ -22,37 +22,88 @@
     </ion-segment>
     <div [ngSwitch]="displayType">
         <div class="today" *ngSwitchCase="'today'">
-            <ion-card no-margin>
+            <ion-card no-margin *ngFor="let item of today">
                 <ion-card-header>
-                    <h1 class="orderId">PO# 1101110</h1>
-                    <ion-badge item-end>PACKING</ion-badge>
+                    <h1 class="orderId">{{item.order}}</h1>
+                    <ion-badge item-end *ngIf="item.status == 'ready'" class="ready">READY</ion-badge>
+                    <ion-badge item-end *ngIf="item.status == 'packing'" class="packing">PACKING</ion-badge>
                 </ion-card-header>
                 <ion-card-content>
                     <table width="100%" margin-bottom>
                         <thead>
                             <tr>
-                                <th>Items</th>
+                                <th>Branch</th>
                                 <th>Qty</th>
-                                <th>Amount</th>
+                                <th>Vessels</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>3</td>
-                                <td>80</td>
-                                <td>$ 1165.44</td>
+                                <td>{{item.branch}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.vessels}}</td>
                             </tr>
                         </tbody>
                     </table>
-                    <button ion-button icon-left small round class="reorder" (click)="trackPage('MenuPage')">
-                        <ion-icon name="md-refresh"></ion-icon>
-                        Re-Order
+                    <button ion-button icon-left small round class="reorder">
+                        <ion-icon name="md-call"></ion-icon>
+                        CALL
                     </button>
-                    <button ion-button small round class="trackorder" float-right (click)="trackPage('TrackPage')">Track Order</button>
+                    <button ion-button small round class="trackorder" float-right icon-left>
+                        <ion-icon name="md-pin"></ion-icon>
+                        LOCATION
+                    </button>
                 </ion-card-content>
             </ion-card>
         </div>
+        <expandable-header [scrollArea]="mycontent" headerHeight="125">
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="search"></ion-icon>
+                </ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="funnel-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+        </expandable-header>
         <div class="completed" *ngSwitchCase="'completed'">
+            <ion-card no-margin *ngFor="let item of completed">
+                <ion-card-header>
+                    <h1 class="orderId">{{item.order}}</h1>
+                    <ion-badge item-end class="completed">COMPLETED</ion-badge>
+                </ion-card-header>
+                <ion-card-content>
+                    <table width="100%" margin-bottom>
+                        <thead>
+                            <tr>
+                                <th>Branch</th>
+                                <th>Qty</th>
+                                <th>Vessels</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{item.branch}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.vessels}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button ion-button icon-left small round class="reorder">
+                        <ion-icon name="md-call"></ion-icon>
+                        CALL
+                    </button>
+                    <button ion-button small round class="trackorder" float-right icon-left>
+                        <ion-icon name="md-pin"></ion-icon>
+                        LOCATION
+                    </button>
+                </ion-card-content>
+            </ion-card>
         </div>
     </div>
 </ion-content>

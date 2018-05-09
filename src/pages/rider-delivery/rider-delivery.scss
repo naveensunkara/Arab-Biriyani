@@ -18,4 +18,57 @@ page-rider-delivery{
             }
         }
     }
+    ion-card.card-md{
+        width: 100%;
+        border: 1px solid #ccc;
+        ion-card-header{
+            position: relative;
+            h1{
+                font-weight: bold;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ccc;
+            }
+            ion-badge.badge-md{
+                position: absolute;
+                right: 16px;
+                background: #9d3aff;
+                color: white;
+                top: 16px;
+                padding: 5px 16px;
+                &.ready{
+                    background: #2ec95c;
+                }
+                &.completed{
+                    background: red;
+                }
+            }
+        }
+    }
+    ion-card-content {
+        table {
+            text-align: center;
+            font-size: 2.25rem;
+            th{
+                font-weight: normal;
+                color: #95989a;
+                width: 30%;
+            }
+            td {
+                color: #5e5e5e;
+                font-weight: 700;
+                font-size: 2.5rem;
+            }
+            th:last-child {
+                text-align: right;
+            }
+            td:last-child {
+                text-align: right;
+            }
+        }
+        button.button-md{
+            background: #fea20f;
+            color: #000;
+            font-weight: bold;
+        }
+    }
 }
