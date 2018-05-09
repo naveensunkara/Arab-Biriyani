@@ -12,7 +12,7 @@
 
 <ion-content>
     <!-- Segment in content -->
-    <ion-segment [(ngModel)]="displayType" color="primary" #mycontent>
+    <ion-segment [(ngModel)]="displayType" color="primary">
         <ion-segment-button value="today">
             Today
         </ion-segment-button>
@@ -56,21 +56,6 @@
                 </ion-card-content>
             </ion-card>
         </div>
-        <expandable-header [scrollArea]="mycontent" headerHeight="125">
-            <ion-item>
-                <ion-label>
-                    <ion-icon name="search"></ion-icon>
-                </ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-
-            <ion-item>
-                <ion-label>
-                    <ion-icon name="funnel-outline"></ion-icon>
-                </ion-label>
-                <ion-input type="text"></ion-input>
-            </ion-item>
-        </expandable-header>
         <div class="completed" *ngSwitchCase="'completed'">
             <ion-card no-margin *ngFor="let item of completed">
                 <ion-card-header>
