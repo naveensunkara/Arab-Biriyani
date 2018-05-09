@@ -37,10 +37,18 @@ export class MyApp {
     { title: 'My Account', component: 'AccountPage', class: 'inactive' },
     { title: 'Notification', component: 'NotificationPage', class: 'inactive' },
     { title: 'Chat', component: 'ChatPage', class: 'inactive' },
-    { title: 'Support', component: 'SupportPage', class: 'inactive' },
+    { title: 'Support', component: 'KitchenOrdersPage', class: 'inactive' },
     { title: 'Log Out', component: 'LoginPage', class: 'inactive' }
-  ]
+  ];
 
+  riderMenu: any[] = [
+    { title: 'Delivery Orders', component: 'MenuPage', class: 'inactive' },
+    { title: 'Manage Vessels', component: 'OrderPage', class: 'inactive' },
+    { title: 'My Account', component: 'AccountPage', class: 'inactive' },
+    { title: 'Notification', component: 'NotificationPage', class: 'inactive' },
+    { title: 'Log Out', component: 'PaymentHistoryPage', class: 'inactive' }
+  ];
+ 
   constructor(platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
     this.pages[0].class = 'active';
     platform.ready().then(() => {
