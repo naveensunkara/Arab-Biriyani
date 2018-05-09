@@ -63,4 +63,15 @@ export class RiderUserPage {
         }
     ]
     constructor(public navCtrl: NavController) { }
+    slider(item, type){
+        let index = this.live.indexOf(item);
+        if(this.live[index].sliderMargin == undefined || this.live[index].sliderMargin == '-130px -16px 0'){
+            this.live[index].sliderContent = true;
+            this.live[index].sliderMargin = '0 -16px 0';
+            this.live[index].sliderType = type;
+        }
+        else{
+            this.live[index].sliderMargin = '-130px -16px 0';
+        }
+    }
 }
