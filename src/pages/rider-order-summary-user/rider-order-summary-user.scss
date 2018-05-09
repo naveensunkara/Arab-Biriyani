@@ -1,26 +1,12 @@
-page-rider-user{
+page-rider-order-summary-user{
     ion-toolbar{
-        .toolbar-content{
-            display: flex;
-            .filter{
-                background: transparent;
-                box-shadow: none;
-                ion-badge.badge-md{
-                    padding: 4px 0;
-                    width: 20px;
-                    height: 20px;
-                    border-radius: 50%;
-                    font-size: 1.1rem;
-                    position: absolute;
-                    top: 0;
-                    right: 2px;
-                }
-            }
+        ion-title{
+            padding-right: 56px; 
         }
     }
     ion-card.card-md{
         width: 100%;
-        border: 1px solid #ccc;
+        box-shadow: none;
         ion-card-header{
             position: relative;
             h1{
@@ -72,6 +58,7 @@ page-rider-user{
                     text-align: center;
                 }
             }
+            
         }
         button.button-md{
             background: #fea20f;
@@ -88,6 +75,7 @@ page-rider-user{
                 color: white;
                 font-weight: bold;
                 font-size: 2.6rem;
+                width: 60%;
             }
             h3{
                 color: white; 
@@ -97,10 +85,9 @@ page-rider-user{
             }
             button{
                 position: absolute;
-                bottom: 50%;
+                bottom: 0;
                 margin: 0;
                 right: 0;
-                margin-bottom: -1rem;
             }
             > div{
                 position: relative;
@@ -112,6 +99,48 @@ page-rider-user{
             z-index: 999;
             position: relative;
             padding: 0 16px;
+        }
+        .items{
+            border-top: 1px solid #ccc;
+            h3{
+                font-size: 2rem;
+                color: #95989a;
+                margin-bottom: 16px;
+            }
+            > div h1{
+                font-weight: bold;
+                width: 49%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            table{
+                width: 100%;
+                thead{
+                    border-bottom: 1px solid #ccc;
+                }
+                tr th:first-child, tr td:first-child{
+                    text-align: left;
+                }
+                tbody{
+                    color: #000;
+                }
+            }
+        }
+    }
+    ion-footer {
+        ion-toolbar.toolbar-md {
+            padding: 0px;
+            .toolbar-content{
+                button {
+                    background: #fea20f;
+                    color: #333;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    height: 6rem;
+                    margin:0px;
+                    position: static;
+                }  
+            }
         }
     }
 }
