@@ -7,7 +7,7 @@ import { IonicPage, NavController } from 'ionic-angular';
     templateUrl: 'rider-delivery.html'
 })
 
-export class RiderDeliveryPage {
+export class RiderDeliveryPage { 
     displayType: any = 'today';
     today: any = [
         {
@@ -15,28 +15,36 @@ export class RiderDeliveryPage {
             status: 'ready',
             branch: 'Little India',
             quantity: '80',
-            vessels: '3'
+            vessels: '3',
+            phone: '+65 6363 5498',
+            address: '414 Baleser Road<br>Singapore 329806'
         },
         {
             order: 'PO# 1100012',
             status: 'packing',
             branch: 'Fancy',
             quantity: '60',
-            vessels: '5'
+            vessels: '5',
+            phone: '+65 6363 3413',
+            address: '414 Nasser Road<br>Singapore 456952'
         },
         {
             order: 'PO# 1100013',
             status: 'packing',
             branch: 'Little India',
             quantity: '100',
-            vessels: '7'
+            vessels: '7',
+            phone: '+65 6363 5255',
+            address: '414 Rahman Road<br>Singapore 35622'
         },
         {
             order: 'PO# 1100014',
             status: 'packing',
             branch: 'Fine Biriyani',
             quantity: '120',
-            vessels: '10'
+            vessels: '10',
+            phone: '+65 6363 6734',
+            address: '414 Elsaan Road<br>Singapore 63425'
         }
     ];
     completed: any = [
@@ -70,4 +78,15 @@ export class RiderDeliveryPage {
         }
     ]
     constructor(public navCtrl: NavController){}
+    slider(item, type){
+        let index = this.today.indexOf(item);
+        if(this.today[index].sliderMargin == undefined || this.today[index].sliderMargin == '-130px -16px 0'){
+            this.today[index].sliderContent = true;
+            this.today[index].sliderMargin = '0 -16px 0';
+            this.today[index].sliderType = type;
+        }
+        else{
+            this.today[index].sliderMargin = '-130px -16px 0';
+        }
+    }
 }

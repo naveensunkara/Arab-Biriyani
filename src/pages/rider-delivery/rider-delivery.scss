@@ -45,6 +45,7 @@ page-rider-delivery{
         }
     }
     ion-card-content {
+        padding-bottom: 0 !important;
         table {
             text-align: center;
             font-size: 2.25rem;
@@ -69,6 +70,40 @@ page-rider-delivery{
             background: #fea20f;
             color: #000;
             font-weight: bold;
+        }
+        .slider{
+            margin: -130px -16px 0;
+            background: #6b0082;
+            height: 130px;
+            transition: all 0.3s;
+            padding: 16px;
+            h1{
+                color: white;
+                font-weight: bold;
+                font-size: 2.6rem;
+            }
+            h3{
+                color: white; 
+                font-size: 2rem;
+                margin-bottom: 16px;
+                white-space: nowrap; 
+            }
+            button{
+                position: absolute;
+                bottom: 0;
+                margin: 0;
+                right: 0;
+            }
+            > div{
+                position: relative;
+            }
+        }
+        .slideHeader{
+            margin: 0 -16px;
+            background: #fff;
+            z-index: 999;
+            position: relative;
+            padding: 0 16px;
         }
     }
 }
