@@ -77,6 +77,13 @@ page-vessels{
             height: 130px;
             transition: all 0.3s;
             padding: 16px;
+            .vessels{
+                h1{
+                    color: white;
+                    font-weight: normal;
+                    width: 70%;
+                }
+            }
             h1{
                 color: white;
                 font-weight: bold;
