@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
-
+import { IonicPage, NavController, PopoverController } from 'ionic-angular';
+import { RiderPopPage } from '../rider-pop/rider-pop';
 @IonicPage()
 @Component({
     selector: 'page-rider-delivery',
-    templateUrl: 'rider-delivery.html'
+    templateUrl: 'rider-delivery.html',
+    entryComponents: [RiderPopPage]
 })
 
-export class RiderDeliveryPage { 
+export class RiderDeliveryPage {
     displayType: any = 'today';
     today: any = [
         {
@@ -77,16 +78,22 @@ export class RiderDeliveryPage {
             vessels: '7'
         }
     ]
-    constructor(public navCtrl: NavController){}
-    slider(item, type){
+    constructor(public navCtrl: NavController,public popoverCtrl: PopoverController) { }
+    slider(item, type) {
         let index = this.today.indexOf(item);
-        if(this.today[index].sliderMargin == undefined || this.today[index].sliderMargin == '-130px -16px 0'){
+        if (this.today[index].sliderMargin == undefined || this.today[index].sliderMargin == '-130px -16px 0') {
             this.today[index].sliderContent = true;
             this.today[index].sliderMargin = '0 -16px 0';
             this.today[index].sliderType = type;
         }
-        else{
+        else {
             this.today[index].sliderMargin = '-130px -16px 0';
         }
+    }
+    presentPopover(myEvent) {
+        let popover = this.popoverCtrl.create('RiderPopPage');
+        popover.present({
+            ev: myEvent
+        });
     }
 }

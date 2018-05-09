@@ -30,7 +30,7 @@ export class MyApp {
   swipe: boolean = false;
   @ViewChild(Nav) nav: Nav;
 
-  pages: any[] = [
+  pages1: any[] = [
     { title: 'Menu', component: 'MenuPage', class: 'inactive' },
     { title: 'My Orders', component: 'OrderPage', class: 'inactive' },
     { title: 'Payment History', component: 'PaymentHistoryPage', class: 'inactive' },
@@ -41,7 +41,7 @@ export class MyApp {
     { title: 'Log Out', component: 'LoginPage', class: 'inactive' }
   ];
 
-  riderMenu: any[] = [
+  pages: any[] = [
     { title: 'Delivery Orders', component: 'RiderDeliveryPage', class: 'inactive' },
     { title: 'Manage Vessels', component: 'VesselsPage', class: 'inactive' },
     { title: 'My Account', component: 'AccountPage', class: 'inactive' },
