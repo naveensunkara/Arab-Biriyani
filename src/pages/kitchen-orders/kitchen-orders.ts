@@ -9,7 +9,7 @@ import { Chart } from 'chart.js';
 })
 
 export class KitchenOrdersPage {
-    @ViewChild('canvas') canvas1: ElementRef;
+    @ViewChild('canvas') canvas: ElementRef;
     chart: any;
     displayType: any = 'orderDetail';
     quantity: any = {
@@ -82,10 +82,9 @@ export class KitchenOrdersPage {
 
     constructor(public navCtrl: NavController) {
         this.calculateQuantity();
-        console.log(this.canvas1)
     }
     ionViewDidLoad() {
-        this.chart = new Chart(this.canvas1.nativeElement, {
+        this.chart = new Chart(this.canvas.nativeElement, {
             type: 'doughnut',
             data: {
                 labels: ["CB", "MB", "FB", "EB", "VB"],
@@ -144,6 +143,5 @@ export class KitchenOrdersPage {
                 }
             });
         });
-        console.log(this.canvas1)
     }
 }
