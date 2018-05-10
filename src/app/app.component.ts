@@ -30,7 +30,6 @@ export class MyApp {
   swipe: boolean = false;
   @ViewChild(Nav) nav: Nav;
 
-  pages: any[] = this[this.share.getUser()];
   branch: any[] = [
     { title: 'Menu', component: 'MenuPage', class: 'inactive' },
     { title: 'My Orders', component: 'OrderPage', class: 'inactive' },
@@ -41,7 +40,7 @@ export class MyApp {
     { title: 'Support', component: 'KitchenOrdersPage', class: 'inactive' },
     { title: 'Log Out', component: 'LoginPage', class: 'inactive' }
   ];
-
+  
   riderBranch: any[] = [
     { title: 'Delivery Orders', component: 'RiderDeliveryPage', class: 'inactive' },
     { title: 'Manage Vessels', component: 'VesselsPage', class: 'inactive' },
@@ -49,14 +48,16 @@ export class MyApp {
     { title: 'Notification', component: 'NotificationPage', class: 'inactive' },
     { title: 'Log Out', component: 'LoginPage', class: 'inactive' }
   ];
-
+  
   riderUser: any[] = [
     { title: 'Assigned Orders', component: 'RiderUserPage', class: 'inactive' },
     { title: 'My Account', component: 'AccountPage', class: 'inactive' },
     { title: 'Notification', component: 'NotificationPage', class: 'inactive' },
     { title: 'Log Out', component: 'LoginPage', class: 'inactive' }
   ];
-
+  //pages: any[] = this[this.share.getUser()];
+  pages: any[] = this.riderBranch;
+  
   constructor(platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, private share: ShareService, events: Events) {
     //this.pages[0].class = 'active';
     platform.ready().then(() => {
