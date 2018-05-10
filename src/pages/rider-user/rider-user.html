@@ -4,7 +4,7 @@
             <ion-icon name="menu"></ion-icon>
         </button>
         <ion-title text-center>Assigned Orders</ion-title>
-        <button ion-button icon-only class="filter">
+        <button ion-button icon-only class="filter" (click)="presentPopover($event)">
             <ion-icon name="ios-funnel-outline"></ion-icon>
         </button>
     </ion-toolbar>
@@ -71,7 +71,7 @@
                                 <h3>Order Summary</h3>
                                 <h1>CB X 1</h1>
                                 <h1>MB X 1</h1>
-                                <button ion-button small round class="reorder" (click)="direction(item.address)">
+                                <button ion-button small round class="reorder" (click)="openPage('RiderOrderSummaryUserPage')">
                                     Recieved Packet
                                 </button>
                             </div>

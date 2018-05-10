@@ -23,14 +23,14 @@
     <div [ngSwitch]="displayType">
         <div class="today" *ngSwitchCase="'today'">
             <ion-card no-margin *ngFor="let item of today">
-                <ion-card-header>
+                <ion-card-header (click)="openPage('RiderOrderSummaryPage')">
                     <h1 class="orderId">{{item.order}}</h1>
                     <ion-badge item-end *ngIf="item.status == 'ready'" class="ready">READY</ion-badge>
                     <ion-badge item-end *ngIf="item.status == 'packing'" class="packing">PACKING</ion-badge>
                 </ion-card-header>
                 <ion-card-content>
                     <div class="slideHeader">
-                        <table width="100%" margin-bottom>
+                        <table width="100%" margin-bottom (click)="openPage('RiderOrderSummaryPage')">
                             <thead>
                                 <tr>
                                     <th>Branch</th>

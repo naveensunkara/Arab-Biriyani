@@ -74,7 +74,7 @@ export class RiderUserPage {
             quantity: '100'
         }
     ]
-    constructor(public navCtrl: NavController) { }
+    constructor(public navCtrl: NavController, public popoverCtrl: PopoverController) { }
     slider(item, type){
         let index = this.live.indexOf(item);
         if(this.live[index].sliderMargin == undefined || this.live[index].sliderMargin == '-130px -16px 0'){
@@ -85,5 +85,14 @@ export class RiderUserPage {
         else{
             this.live[index].sliderMargin = '-130px -16px 0';
         }
+    }
+    openPage(page){
+        this.navCtrl.push(page);
+    }
+    presentPopover(myEvent) {
+        let popover = this.popoverCtrl.create('RiderPopPage');
+        popover.present({
+            ev: myEvent
+        });
     }
 }

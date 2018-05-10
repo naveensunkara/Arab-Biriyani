@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, PopoverController, Popover } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -77,7 +77,7 @@ export class VesselsPage {
             vessels: '7'
         }
     ]
-    constructor(public navCtrl: NavController){}
+    constructor(public navCtrl: NavController, public popoverCtrl: PopoverController){}
     slider(item, type){
         let index = this.today.indexOf(item);
         if(this.today[index].sliderMargin == undefined || this.today[index].sliderMargin == '-130px -16px 0'){
@@ -88,5 +88,11 @@ export class VesselsPage {
         else{
             this.today[index].sliderMargin = '-130px -16px 0';
         }
+    }
+    presentPopover(myEvent) {
+        let popover = this.popoverCtrl.create('RiderPopPage');
+        popover.present({
+            ev: myEvent
+        });
     }
 }

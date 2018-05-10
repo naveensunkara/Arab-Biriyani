@@ -96,4 +96,7 @@ export class RiderDeliveryPage {
             ev: myEvent
         });
     }
+    openPage(page){
+        this.navCtrl.push(page);
+    }
 }
