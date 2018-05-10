@@ -86,32 +86,35 @@ export class KitchenOrdersPage {
     }
     ionViewDidLoad() {
         this.chart = new Chart(this.canvas1.nativeElement, {
-
             type: 'doughnut',
             data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: ["CB", "MB", "FB", "EB", "VB"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [12, 19, 3, 5, 2],
                     backgroundColor: [
                         'rgba(255, 99, 132, 1)',
                         'rgba(54, 162, 235, 1)',
                         'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'rgba(153, 102, 255, 1)'
                     ],
                     hoverBackgroundColor: [
                         "#FF6384",
                         "#36A2EB",
                         "#FFCE56",
                         "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
+                        "#36A2EB"
                     ]
                 }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                animation: {animateScale : true}
             }
-
+            
         });
 
     }
