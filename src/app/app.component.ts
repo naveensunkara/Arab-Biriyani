@@ -56,7 +56,7 @@ export class MyApp {
     { title: 'Log Out', component: 'LoginPage', class: 'inactive' }
   ];
   //pages: any[] = this[this.share.getUser()];
-  pages: any[] = this.riderBranch;
+  pages: any[] = this.riderUser;
   
   constructor(platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen, private share: ShareService, events: Events) {
     //this.pages[0].class = 'active';
